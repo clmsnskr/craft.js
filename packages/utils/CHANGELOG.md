@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.2.0 (2020-04-27)
+
+
+### Features
+
+* Implement History API ([#16](https://github.com/candulabs/craft.js/issues/16)) ([4514c36](https://github.com/candulabs/craft.js/commit/4514c36cfe0037c60af68c0939b0fcc263476a93))
+
+
+
+
+
 ## 0.1.15 (2020-04-21)
 
 
