@@ -32,7 +32,7 @@ export function Canvas<T extends React.ElementType>({
 }: Canvas<T>) {
   const id = props.id;
   const {
-    actions: { add, setProp },
+    actions: { setProp, runWithoutHistory },
     query,
     inContext,
   } = useInternalEditor();
@@ -56,7 +56,7 @@ export function Canvas<T extends React.ElementType>({
             query.createNode(jsx)
           );
 
-          add(childNodes, nodeId);
+          runWithoutHistory.add(childNodes, nodeId);
         }
       } else {
         invariant(id, ERROR_ROOT_CANVAS_NO_ID);
@@ -88,7 +88,7 @@ export function Canvas<T extends React.ElementType>({
         );
 
         internalId = rootNode.id;
-        add(rootNode, nodeId);
+        runWithoutHistory.add(rootNode, nodeId);
 
         setInternalId(internalId);
       }
