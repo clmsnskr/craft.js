@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.3.0 (2020-05-03)
+
+
+### Features
+
+* add normalising function ([#17](https://github.com/candulabs/craft.js/issues/17)) ([339c645](https://github.com/candulabs/craft.js/commit/339c6456c9f67432024cdc971155a04c8c8b8777))
+
+
+
+
+
 ## 0.2.1 (2020-05-01)
 
 **Note:** Version bump only for package @candulabs/craft-core
