@@ -15,7 +15,7 @@ const event = ({
   handler: (e: MouseEvent, payload: any) => void;
   capture?: boolean;
 }) => (capture ? [name, handler, capture] : [name, handler]);
-const rapidDebounce = (f) => debounce(f, 1);
+const rapidDebounce = (f) => debounce(f, 10);
 
 /**
  * Specifies Editor-wide event handlers and connectors
@@ -46,9 +46,9 @@ export class EventHandlers extends Handlers<
         events: [
           event({
             name: "mouseover",
-            handler: rapidDebounce((_, id: NodeId) =>
-              this.store.actions.setNodeEvent("hovered", id)
-            ),
+            handler: rapidDebounce((e, id: NodeId) => {
+              this.store.actions.setNodeEvent("hovered", id);
+            }),
             capture: true,
           }),
         ],
@@ -73,9 +73,14 @@ export class EventHandlers extends Handlers<
                 return;
               }
 
-              const node = draggedElement.rootNodeId
-                ? draggedElement.nodes[draggedElement.rootNodeId]
-                : draggedElement;
+              let node: Node | NodeId = draggedElement as NodeId;
+
+              if (draggedElement["rootNodeId"]) {
+                node = (draggedElement as Tree).nodes[
+                  (draggedElement as Tree).rootNodeId
+                ];
+              }
+
               const { clientX: x, clientY: y } = e;
               const indicator = this.store.query.getDropPlaceholder(
                 node,
