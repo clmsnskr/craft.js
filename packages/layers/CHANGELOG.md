@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.3.2 (2020-05-25)
+
+
+### Bug Fixes
+
+* RTE undo/redo, throttle hover, ancestors infinite loop ([#21](https://github.com/prevwong/craft.js/issues/21)) ([277bd7f](https://github.com/prevwong/craft.js/commit/277bd7f04fd2579c565e051ca239252993198479))
+
+
+
+
+
 ## 0.3.1 (2020-05-07)
 
 **Note:** Version bump only for package @candulabs/craft-layers
