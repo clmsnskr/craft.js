@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.4.0 (2020-06-11)
+
+
+### Features
+
+* add setState and custom prop injection ([#23](https://github.com/candulabs/craft.js/issues/23)) ([7317ce2](https://github.com/candulabs/craft.js/commit/7317ce27d6d57a5be3cf4fb0573be1fb18d01366))
+
+
+
+
+
 ## 0.3.2 (2020-05-25)
 
 
